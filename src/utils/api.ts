@@ -27,9 +27,7 @@ export const getUrlForDataset = (urn: string): string => {
   return `${DATAHUB_FRONTEND}/dataset/${encodeURIComponent(urn)}`;
 };
 
-export const searchGraphForEntity = async (
-  entityName: string
-): Promise<SearchResult[]> => {
+export const searchGraphForEntity = async (entityName: string): Promise<SearchResult[]> => {
   const query = `
     {
       search(input: {
